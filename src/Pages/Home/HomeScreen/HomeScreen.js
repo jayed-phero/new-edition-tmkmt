@@ -14,6 +14,29 @@ import PrincipalSection from "../PrincipleSection/PrincipalSection";
 import { Link } from "react-router-dom";
 
 const HomeScreen = () => {
+
+    const infodata = [
+        {
+            icon: <i class="fa-solid fa-building-columns"></i>,
+            title: 'Madrasah Life',
+            desc: 'Overall in here',
+        },
+        {
+            icon: <i class="fa-solid fa-user-graduate"></i>,
+            title: 'Mauwlana',
+            desc: 'Getting Diploma',
+        },
+        {
+            icon: <i class="fa-brands fa-battle-net"></i>,
+            title: 'Takshu',
+            desc: 'Institution Club',
+        },
+        {
+            icon: <i class="fa-brands fa-playstation"></i>,
+            title: 'Social',
+            desc: 'Overall in here',
+        },
+    ]
     return (
         <div>
             <div className="">
@@ -41,7 +64,7 @@ const HomeScreen = () => {
                                 <div class="text-left md:pl-32 pl-5">
                                     <h3 className="text-white md:text-3xl text-xl font-medium mb-5">The Best Madrasah Of The State</h3>
                                     <h1 class="text-2xl font-bold text-white md:text-4xl lg:text-6xl bg-regal-indigo p-3 md:p-5 ">Ta'mirul Millat Kamil Madrasah</h1>
-                                   <Link to='/comming'> <button class=" py-3 mt-4 text-md md:text-lg font-medium text-gray-700 hover:text-regal-indigo capitalize transition-colors duration-300 transform bg-white lg:w-44 w-32 border-l-4 border-regal-green">Tak A Tour</button></Link>
+                                    <Link to='/comming'> <button class=" py-3 mt-4 text-md md:text-lg font-medium text-gray-700 hover:text-regal-indigo capitalize transition-colors duration-300 transform bg-white lg:w-44 w-32 border-l-4 border-regal-green">Tak A Tour</button></Link>
                                 </div>
                             </div>
                         </div>
@@ -73,8 +96,18 @@ const HomeScreen = () => {
                 </Swiper>
             </div>
             <div className="relative">
-                <div className="md:absolute -top-16 left-0 right-0 z-50">
-                    <PrincipalSection />
+                <div className='max-w-7xl mx-auto bg-white shadow-2xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 px-5 md:px-16 py-7 md:py-11 gap-11 md:gap-0 md:absolute -top-16 left-0 right-0 z-50'>
+                    {
+                        infodata.map(data =>
+                            <div className='flex items-start gap-5'>
+                                <h3 className='text-5xl'>{data.icon}</h3>
+                                <div>
+                                    <h3 className='text-regal-indigo text-xl font-semibold'>{data.title}</h3>
+                                    <p className='text-gray-900 text-xl '>{data.desc}</p>
+                                </div>
+                            </div>
+                        )
+                    }
                 </div>
             </div>
         </div>

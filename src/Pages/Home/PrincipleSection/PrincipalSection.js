@@ -1,43 +1,9 @@
 import React from 'react';
 
 const PrincipalSection = () => {
-    const infodata = [
-        {
-            icon: <i class="fa-solid fa-building-columns"></i>,
-            title: 'Madrasah Life',
-            desc: 'Overall in here',
-        },
-        {
-            icon: <i class="fa-solid fa-user-graduate"></i>,
-            title: 'Mauwlana',
-            desc: 'Getting Diploma',
-        },
-        {
-            icon: <i class="fa-brands fa-battle-net"></i>,
-            title: 'Takshu',
-            desc: 'Institution Club',
-        },
-        {
-            icon: <i class="fa-brands fa-playstation"></i>,
-            title: 'Social',
-            desc: 'Overall in here',
-        },
-    ]
+   
     return (
-        <div className='max-w-7xl mx-auto px-5 lg:px-0'>
-            <div className='bg-white shadow-2xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 px-5 md:px-16 py-7 md:py-11 gap-11 md:gap-0'>
-                {
-                    infodata.map(data =>
-                        <div className='flex items-start gap-5'>
-                            <h3 className='text-5xl'>{data.icon}</h3>
-                            <div>
-                                <h3 className='text-regal-indigo text-xl font-semibold'>{data.title}</h3>
-                                <p className='text-gray-900 text-xl '>{data.desc}</p>
-                            </div>
-                        </div>
-                    )
-                }
-            </div>
+        <div className='max-w-7xl mx-auto px-5 lg:px-0 mt-16'>
             <div className='flex items-start flex-col md:flex-row'>
                 <div className='w-full'>
                     <img class="object-cover w-full h-64 principalIntro md:h-96 lg:h-[31rem]  " src="https://images.unsplash.com/photo-1562788869-4ed32648eb72?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjJ8fHByb2Zlc3Npb25hbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="" />
